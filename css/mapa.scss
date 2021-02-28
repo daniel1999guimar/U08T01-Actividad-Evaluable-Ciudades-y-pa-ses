@@ -1,0 +1,10 @@
+$azul: #287fdb;
+$border: 1px solid $azul;
+#mapa
+    {
+        grid-area: mapa;
+        width: auto;
+        height: auto;
+        border-bottom: $border;
+        min-height: 400px;
+    }

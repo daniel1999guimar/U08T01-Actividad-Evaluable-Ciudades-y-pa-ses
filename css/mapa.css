@@ -1,0 +1,8 @@
+#mapa {
+  grid-area: mapa;
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid #287fdb;
+  min-height: 400px;
+}
+/*# sourceMappingURL=mapa.css.map */

@@ -1,11 +1,16 @@
-$fondo: #f4f3f4;
-$azul: #2c84e5;
+@import './grafica.scss', './juego.scss', './mapa.scss';
+
+$gris-azul: #abb8c8;
+$gris: #c9c7c7;
+$fondo: #e2e0e2;
+$azul: #287fdb;
 $azul-flojo: #f0ffff;
-$border: 1px solid $azul;
+
+$verde-light: lighten( green, 50% );
 
 body
 {
-    font-family: Arial;
+    font-family: 'Dosis', sans-serif;
     margin: 0;
     height: 810px;
     header
@@ -18,124 +23,34 @@ body
     .principal
     {
         flex-grow: 1;
-        #paises
-        {
-            grid-area: paises;
-            border-bottom: $border;
-            display: flex;
-            min-height: 400px;
-            .divTiempo
-            {
-                display: flex;
-                justify-content: space-between;
-                padding: 5px 10px;
-                margin: 0;
-                background-color: $azul-flojo;
-                border-bottom: $border;
-                #nuevaPartida
-                {
-                    border: $border;
-                    background-color: $azul-flojo;
-                    color: $azul;
-                    padding: 5px 8px;
-                    border-radius: 5px;
-                }
-                &:disabled
-                {
-                    border-color: #abb8c8;
-                    background-color: #e7e7e7;
-                    color: #abb8c8;
-                }
-                &:hover
-                {
-                    cursor: pointer;
-                    background-color: #e7e7e7;
-                }
+    }
+    .botonPartida
+    {
+        border: $border;
+        background-color: $azul-flojo;
+        color: $azul;
+        padding: 5px 8px;
+        border-radius: 5px;
+    }
+    .botonPartida:disabled
+    {
+        border-color: $gris-azul;
+        background-color: $gris;
+        color: $gris-azul;
+    }
+    .botonPartida:hover
+    {
+        cursor: pointer;
+        background-color: $gris;
+    }
 
-                &:active
-                {
-                    background-color: #d5e0eb;
-                    outline: none;
-                }
-                .tiempo
-                {
-                    color: $azul;
-                    font-weight: 600;
-                    margin-top: 5px;
-                }
-            }
-            #contenedorDrag, #contenedorDrop
-            {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-items: center;
-                padding: 30px 0;
-            }
-            #contenedorDrag
-            {
-                border-bottom: 1px dotted $azul;
-                flex-grow: 2;
-            }
-
-            #contenedorDrop
-            {
-                flex-grow: 3;
-            }
-            .ciudaDrag
-            {
-                cursor: pointer;
-                display: inline-block;
-                padding: 5px;
-
-                border: $border;
-                background-color: $fondo;
-                color: $azul;
-                font-weight: 600;
-                border-radius: 5px;
-                margin-bottom: 10px;
-            }
-            .pais
-            {
-                text-align: center;
-                border: $border;
-                color: $azul;
-                font-weight: 600;
-                border-radius: 5px;
-                width: 150px;
-                margin-bottom: 10px;
-                .name
-                {
-                    padding: 5px 0;
-                    background-color: $fondo;
-                    border-bottom: $border;
-                }
-                .paisDrop
-                {
-                    height: 70px;
-                }
-            }
-        }
-        #mapa
-        {
-            grid-area: mapa;
-            width: auto;
-            height: auto;
-            border-bottom: $border;
-            min-height: 400px;
-        }
-        #graficaTiempo
-        {
-            grid-area: graficaTiempo;
-        }
-
-        #graficaPaises
-        {
-            grid-area: graficaPaises;
-            width: 60%;
-        }
+    .botonPartida:active
+    {
+        background-color: #d5e0eb;
+        outline: none;
     }
 }
+
 
 @media (min-width: 600px)
 {
@@ -165,5 +80,5 @@ body
 
 .correcto
 {
-    background: #c7f4d0;
+    background: $verde-light;
 }

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa</title>
-    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.css" rel="Stylesheet" id="linkestilo" /> 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link type="text/css" href="jquery-ui-1.11.4/jquery-ui.css" rel="Stylesheet" id="linkestilo" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
     <link type="text/css" href="./css/style.css" rel="stylesheet" />
 </head>
+
 <body class="ciudadypais">
     <header>
         <h1>Ciudades y paises</h1>
@@ -16,31 +20,28 @@
     <main class="principal">
         <div id="paises" class="ciudadypais">
             <div class="divTiempo">
-                <button id="nuevaPartida">Nueva partida</button>
+                <button id="nuevaPartida" class="botonPartida">Nueva partida</button>
                 <div id="nivelDificultad">
-                    <input type="radio" id="facil"
-                    name="nivel" value="5" checked>
-                   <label for="facil">Fácil</label>
-               
-                   <input type="radio" id="normal"
-                    name="nivel" value="6">
-                   <label for="normal">Normal</label>
-               
-                   <input type="radio" id="dificil"
-                    name="nivel" value="7">
-                   <label for="dificil">Difícil</label>
+                    <input type="radio" id="facil" name="nivel" value="5" checked>
+                    <label for="facil">Fácil</label>
+
+                    <input type="radio" id="normal" name="nivel" value="6">
+                    <label for="normal">Normal</label>
+
+                    <input type="radio" id="dificil" name="nivel" value="7">
+                    <label for="dificil">Difícil</label>
                 </div>
                 <div class="tiempo">
                     <label>Tiempo </label><label id="segundos">0</label><label> s</label>
                 </div>
             </div>
-            
+
             <div class="paises-ciudades ciudadypais principal">
                 <div id="contenedorDrag"></div>
                 <template id="plantillaDrag">
                     <div id="ciudad" class="ciudaDrag"></div>
                 </template>
-    
+
                 <div id="contenedorDrop"></div>
                 <template id="plantillaDrop">
                     <div class="pais">
@@ -52,18 +53,19 @@
         </div>
 
         <div id="mapa"></div>
-        
+
         <div id="graficaTiempo"></div>
         <div id="graficaPaises"></div>
     </main>
 </body>
 
 <script src="jquery-ui-1.11.4/external/jquery/jquery.js"></script>
-<script src="jquery-ui-1.11.4/jquery-ui.js"></script>   	
+<script src="jquery-ui-1.11.4/jquery-ui.js"></script>
 
-<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script> 
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="module" src="./script/index.js"></script>
+
 </html>

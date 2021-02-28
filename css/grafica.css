@@ -1,0 +1,9 @@
+#graficaTiempo {
+  grid-area: graficaTiempo;
+}
+
+#graficaPaises {
+  grid-area: graficaPaises;
+  width: 60%;
+}
+/*# sourceMappingURL=grafica.css.map */

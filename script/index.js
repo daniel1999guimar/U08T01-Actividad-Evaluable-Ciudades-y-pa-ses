@@ -134,21 +134,20 @@ function nuevaPartida() {
     seg.innerHTML = tiempoPartida;
 }
 
-
 function seleccionarPaises(paises) {
     paises = paises.slice(0);
     let resultado = [];
 
     while (resultado.length < nivelDificultad && paises.length > 0) {
-        let indice = Math.floor(Math.random() * paises.length);
-        let pais = paises[indice];
+        let numero = Math.floor(Math.random() * paises.length);
+        let pais = paises[numero];
         let ciudad = pais.cities[Math.floor(Math.random() * pais.cities.length)];
 
         resultado.push({
             pais,
             ciudad
         });
-        paises.splice(indice, 1);
+        paises.splice(numero, 1);
     }
 
     return resultado;
@@ -198,9 +197,7 @@ function crearDragDrop(paisesCiudades, divDrag, divDrop) {
                         $(this).addClass("correcto")
                         ui.draggable.draggable("option", "revert", false);
                         aciertos++;
-                        mapa.flyTo(ciudad.location);
-                        marker.setLatLng(ciudad.location);
-                        marker.bindPopup(ciudad.name);
+                        cambiarSitio(ciudad);
                         if (aciertos >= nivelDificultad) {
                             stopContador();
                             botonNuevaPartida.disabled = false;
@@ -219,7 +216,6 @@ function ordenar(array){
 }
 //------------------------------------------------------------Tiempo------------------------------------------------
 function startContador() {
-    tiempoPartida = 0;
     if (intervaloReloj) {
         return false;
     }
@@ -244,5 +240,9 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const marker = L.marker([28.449847, -16.286705]).addTo(mapa);
 marker.bindPopup("CIFP César Manrique");
 
-
+function cambiarSitio(ciudad){
+    mapa.flyTo(ciudad.location);
+    marker.setLatLng(ciudad.location);
+    marker.bindPopup(ciudad.name);
+}
 

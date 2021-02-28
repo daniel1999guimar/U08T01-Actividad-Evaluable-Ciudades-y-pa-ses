@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CACd;EACI,SAAS,EAAE,aAAa;CAC3B;;AAED,AAAA,cAAc,CACd;EACI,SAAS,EAAE,aAAa;EACxB,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "grafica.scss"
+    ],
+    "names": [],
+    "file": "grafica.css"
+}
