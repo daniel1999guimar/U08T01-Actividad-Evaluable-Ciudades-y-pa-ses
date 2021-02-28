@@ -1,179 +1,107 @@
 body {
   font-family: Arial;
   margin: 0;
-  height: 810px;
-}
-
-body header {
-  background-color: #2c84e5;
-  color: white;
-  text-align: center;
-  padding: 0.1px 0;
-}
-
-body .principal {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-body .principal #paises {
-  grid-area: paises;
-  border-bottom: 1px solid #2c84e5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 400px;
-}
-
-body .principal #paises .divTiempo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px 10px;
-  margin: 0;
-  background-color: #f0ffff;
-  border-bottom: 1px solid #2c84e5;
-}
-
-body .principal #paises .divTiempo #nuevaPartida {
-  border: 1px solid #2c84e5;
-  background-color: #f0ffff;
-  color: #2c84e5;
-  padding: 5px 8px;
-  border-radius: 5px;
-}
-
-body .principal #paises .divTiempo:disabled {
-  border-color: #abb8c8;
-  background-color: #e7e7e7;
-  color: #abb8c8;
-}
-
-body .principal #paises .divTiempo:hover {
-  cursor: pointer;
-  background-color: #e7e7e7;
-}
-
-body .principal #paises .divTiempo:active {
-  background-color: #d5e0eb;
-  outline: none;
-}
-
-body .principal #paises .divTiempo .tiempo {
-  color: #2c84e5;
-  font-weight: 600;
-  margin-top: 5px;
-}
-
-body .principal #paises #contenedorDrag, body .principal #paises #contenedorDrop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 30px 0;
-}
-
-body .principal #paises #contenedorDrag {
-  border-bottom: 1px dotted #2c84e5;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-body .principal #paises #contenedorDrop {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-}
-
-body .principal #paises .ciudaDrag {
-  cursor: pointer;
-  display: inline-block;
-  padding: 5px;
-  border: 1px solid #2c84e5;
-  background-color: #f4f3f4;
-  color: #2c84e5;
-  font-weight: 600;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-body .principal #paises .pais {
-  text-align: center;
-  border: 1px solid #2c84e5;
-  color: #2c84e5;
-  font-weight: 600;
-  border-radius: 5px;
-  width: 150px;
-  margin-bottom: 10px;
-}
-
-body .principal #paises .pais .name {
-  padding: 5px 0;
-  background-color: #f4f3f4;
-  border-bottom: 1px solid #2c84e5;
-}
-
-body .principal #paises .pais .paisDrop {
-  height: 70px;
-}
-
-body .principal #mapa {
-  grid-area: mapa;
-  width: auto;
-  height: auto;
-  border-bottom: 1px solid #2c84e5;
-  min-height: 400px;
-}
-
-body .principal #graficaTiempo {
-  grid-area: graficaTiempo;
-}
-
-body .principal #graficaPaises {
-  grid-area: graficaPaises;
-  width: 60%;
-}
+  height: 810px; }
+  body header {
+    background-color: #2c84e5;
+    color: white;
+    text-align: center;
+    padding: 0.1px 0; }
+  body .principal {
+    flex-grow: 1; }
+    body .principal #paises {
+      grid-area: paises;
+      border-bottom: 1px solid #2c84e5;
+      display: flex;
+      min-height: 400px; }
+      body .principal #paises .divTiempo {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        margin: 0;
+        background-color: #f0ffff;
+        border-bottom: 1px solid #2c84e5; }
+        body .principal #paises .divTiempo #nuevaPartida {
+          border: 1px solid #2c84e5;
+          background-color: #f0ffff;
+          color: #2c84e5;
+          padding: 5px 8px;
+          border-radius: 5px; }
+        body .principal #paises .divTiempo:disabled {
+          border-color: #abb8c8;
+          background-color: #e7e7e7;
+          color: #abb8c8; }
+        body .principal #paises .divTiempo:hover {
+          cursor: pointer;
+          background-color: #e7e7e7; }
+        body .principal #paises .divTiempo:active {
+          background-color: #d5e0eb;
+          outline: none; }
+        body .principal #paises .divTiempo .tiempo {
+          color: #2c84e5;
+          font-weight: 600;
+          margin-top: 5px; }
+      body .principal #paises #contenedorDrag, body .principal #paises #contenedorDrop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 0; }
+      body .principal #paises #contenedorDrag {
+        border-bottom: 1px dotted #2c84e5;
+        flex-grow: 2; }
+      body .principal #paises #contenedorDrop {
+        flex-grow: 3; }
+      body .principal #paises .ciudaDrag {
+        cursor: pointer;
+        display: inline-block;
+        padding: 5px;
+        border: 1px solid #2c84e5;
+        background-color: #f4f3f4;
+        color: #2c84e5;
+        font-weight: 600;
+        border-radius: 5px;
+        margin-bottom: 10px; }
+      body .principal #paises .pais {
+        text-align: center;
+        border: 1px solid #2c84e5;
+        color: #2c84e5;
+        font-weight: 600;
+        border-radius: 5px;
+        width: 150px;
+        margin-bottom: 10px; }
+        body .principal #paises .pais .name {
+          padding: 5px 0;
+          background-color: #f4f3f4;
+          border-bottom: 1px solid #2c84e5; }
+        body .principal #paises .pais .paisDrop {
+          height: 70px; }
+    body .principal #mapa {
+      grid-area: mapa;
+      width: auto;
+      height: auto;
+      border-bottom: 1px solid #2c84e5;
+      min-height: 400px; }
+    body .principal #graficaTiempo {
+      grid-area: graficaTiempo; }
+    body .principal #graficaPaises {
+      grid-area: graficaPaises;
+      width: 60%; }
 
 @media (min-width: 600px) {
   main {
-    display: -ms-grid;
     display: grid;
-    -webkit-column-gap: 0;
-            column-gap: 0;
+    column-gap: 0;
     row-gap: 0;
-    -ms-grid-columns: 65% 35%;
-        grid-template-columns: 65% 35%;
-    -ms-grid-rows: 60% 40%;
-        grid-template-rows: 60% 40%;
-        grid-template-areas: "paises mapa" "graficaTiempo graficaPaises";
-  }
-  main #paises, main #mapa {
-    min-height: none;
-  }
-}
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "paises mapa" "graficaTiempo graficaPaises"; }
+    main #paises, main #mapa {
+      min-height: none; } }
 
 .ciudadypais {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+  flex-direction: column; }
 
 .correcto {
-  background: #c7f4d0;
-}
-/*# sourceMappingURL=style.css.map */
+  background: #c7f4d0; }

@@ -1,0 +1,29 @@
+{
+  "name": "mapa-dew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./script/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel1999guimar/U08T01-Actividad-Evaluable-Ciudades-y-pa-ses.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel1999guimar/U08T01-Actividad-Evaluable-Ciudades-y-pa-ses/issues"
+  },
+  "homepage": "https://github.com/daniel1999guimar/U08T01-Actividad-Evaluable-Ciudades-y-pa-ses#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-jsdoc3": "^3.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-eslint": "^6.0.0"
+  }
+}
