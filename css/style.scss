@@ -1,0 +1,169 @@
+$fondo: #f4f3f4;
+$azul: #2c84e5;
+$azul-flojo: #f0ffff;
+$border: 1px solid $azul;
+
+body
+{
+    font-family: Arial;
+    margin: 0;
+    height: 810px;
+    header
+    {
+        background-color: $azul;
+        color: white;
+        text-align: center;
+        padding: 0.1px 0;
+    }
+    .principal
+    {
+        flex-grow: 1;
+        #paises
+        {
+            grid-area: paises;
+            border-bottom: $border;
+            display: flex;
+            min-height: 400px;
+            .divTiempo
+            {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px;
+                margin: 0;
+                background-color: $azul-flojo;
+                border-bottom: $border;
+                #nuevaPartida
+                {
+                    border: $border;
+                    background-color: $azul-flojo;
+                    color: $azul;
+                    padding: 5px 8px;
+                    border-radius: 5px;
+                }
+                &:disabled
+                {
+                    border-color: #abb8c8;
+                    background-color: #e7e7e7;
+                    color: #abb8c8;
+                }
+                &:hover
+                {
+                    cursor: pointer;
+                    background-color: #e7e7e7;
+                }
+
+                &:active
+                {
+                    background-color: #d5e0eb;
+                    outline: none;
+                }
+                .tiempo
+                {
+                    color: $azul;
+                    font-weight: 600;
+                    margin-top: 5px;
+                }
+            }
+            #contenedorDrag, #contenedorDrop
+            {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                padding: 30px 0;
+            }
+            #contenedorDrag
+            {
+                border-bottom: 1px dotted $azul;
+                flex-grow: 2;
+            }
+
+            #contenedorDrop
+            {
+                flex-grow: 3;
+            }
+            .ciudaDrag
+            {
+                cursor: pointer;
+                display: inline-block;
+                padding: 5px;
+
+                border: $border;
+                background-color: $fondo;
+                color: $azul;
+                font-weight: 600;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .pais
+            {
+                text-align: center;
+                border: $border;
+                color: $azul;
+                font-weight: 600;
+                border-radius: 5px;
+                width: 150px;
+                margin-bottom: 10px;
+                .name
+                {
+                    padding: 5px 0;
+                    background-color: $fondo;
+                    border-bottom: $border;
+                }
+                .paisDrop
+                {
+                    height: 70px;
+                }
+            }
+        }
+        #mapa
+        {
+            grid-area: mapa;
+            width: auto;
+            height: auto;
+            border-bottom: $border;
+            min-height: 400px;
+        }
+        #graficaTiempo
+        {
+            grid-area: graficaTiempo;
+        }
+
+        #graficaPaises
+        {
+            grid-area: graficaPaises;
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 600px)
+{
+    main
+    {
+        display: grid;
+        column-gap: 0;
+        row-gap: 0;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: 
+        "paises mapa" "graficaTiempo graficaPaises";
+        #paises, #mapa
+        {
+            min-height: none;
+        }
+
+    }
+
+}
+
+.ciudadypais
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.correcto
+{
+    background: #c7f4d0;
+}
